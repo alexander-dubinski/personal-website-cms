@@ -48,13 +48,6 @@ export const career = defineType({
       type: 'number',
     }),
   ],
-  orderings: [
-    {
-      title: 'End Year',
-      name: 'endYear',
-      by: [{ field: 'endYear', direction: 'desc' }],
-    },
-  ],
 });
 
 export const education = defineType({
@@ -103,12 +96,5 @@ export const education = defineType({
       name: 'startYear',
       type: 'number',
     }),
-  ],
-  orderings: [
-    {
-      title: 'End Year',
-      name: 'endYear',
-      by: [{ field: 'endYear', direction: 'desc' }],
-    },
   ],
 });
