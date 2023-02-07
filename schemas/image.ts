@@ -12,4 +12,9 @@ export const imageFields = [
     name: 'link',
     type: 'url',
   }),
+  defineField({
+    title: 'Caption',
+    name: 'caption',
+    type: 'string',
+  }),
 ];
