@@ -79,28 +79,6 @@ export const project = defineType({
           title: 'BodyContent',
           name: 'bodyContent',
           type: 'block',
-          of: [
-            defineArrayMember({
-              title: 'Full Width Section Header',
-              name: 'fullWidthSectionHeader',
-              type: 'string',
-            }),
-            defineArrayMember({
-              title: 'Half Width Section Header',
-              name: 'halfWidthSectionHeader',
-              type: 'string',
-            }),
-            defineArrayMember({
-              title: 'Full Width Text',
-              name: 'fullWidthText',
-              type: 'text',
-            }),
-            defineArrayMember({
-              title: 'Half Width Text',
-              name: 'halfWidthText',
-              type: 'text',
-            }),
-          ],
         }),
       ],
     }),
