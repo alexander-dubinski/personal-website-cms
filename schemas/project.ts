@@ -76,29 +76,31 @@ export const project = defineType({
           fields: imageFields,
         }),
         defineArrayMember({
-          title: 'Full Width Text',
-          name: 'fullWidthText',
+          title: 'BodyContent',
+          name: 'bodyContent',
           type: 'block',
-        }),
-        defineArrayMember({
-          title: 'Half Width Text',
-          name: 'halfWidthText',
-          type: 'block',
-        }),
-        defineArrayMember({
-          title: 'Page Header',
-          name: 'pageHeader',
-          type: 'string',
-        }),
-        defineArrayMember({
-          title: 'Full Width Section Header',
-          name: 'fullWidthSectionHeader',
-          type: 'string',
-        }),
-        defineArrayMember({
-          title: 'Half Width Section Header',
-          name: 'halfWidthSectionHeader',
-          type: 'string',
+          of: [
+            defineArrayMember({
+              title: 'Full Width Section Header',
+              name: 'fullWidthSectionHeader',
+              type: 'string',
+            }),
+            defineArrayMember({
+              title: 'Half Width Section Header',
+              name: 'halfWidthSectionHeader',
+              type: 'string',
+            }),
+            defineArrayMember({
+              title: 'Full Width Text',
+              name: 'fullWidthText',
+              type: 'text',
+            }),
+            defineArrayMember({
+              title: 'Half Width Text',
+              name: 'halfWidthText',
+              type: 'text',
+            }),
+          ],
         }),
       ],
     }),
