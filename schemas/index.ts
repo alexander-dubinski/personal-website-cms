@@ -1,3 +1,3 @@
-import { project } from './project';
+import { project } from '@/schemas/project';
 
 export const schemaTypes = [project];
