@@ -1,5 +1,5 @@
 import { defineArrayMember, defineField, defineType } from 'sanity';
-import { imageFields } from 'schemas/image';
+import { imageFields } from './image';
 
 export const project = defineType({
   title: 'Project',
