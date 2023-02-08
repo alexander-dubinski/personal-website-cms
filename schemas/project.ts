@@ -73,12 +73,34 @@ export const project = defineType({
           title: 'Half Width Image',
           name: 'halfWidthImage',
           type: 'image',
-          fields: imageFields,
+          fields: [
+            ...imageFields,
+            defineField({
+              title: 'Float Right',
+              name: 'floatRight',
+              type: 'boolean',
+            }),
+          ],
+        }),
+        defineArrayMember({
+          title: 'Full Width Quote',
+          name: 'fullWidthQuote',
+          type: 'quote',
+        }),
+        defineArrayMember({
+          title: 'Half Width Quote',
+          name: 'halfWidthQuote',
+          type: 'quote',
         }),
         defineArrayMember({
           title: 'BodyContent',
           name: 'bodyContent',
           type: 'block',
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'Section Heading', value: 'h3' },
+            { title: 'Title', value: 'h1' },
+          ],
         }),
       ],
     }),
