@@ -10,27 +10,12 @@ export const career = defineType({
       title: 'Company',
       name: 'company',
       type: 'string',
-    }),
-    defineField({
-      title: 'Description',
-      name: 'description',
-      type: 'text',
-    }),
-    defineField({
-      title: 'End Year',
-      name: 'endYear',
-      type: 'number',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Department',
       name: 'department',
       type: 'string',
-    }),
-    defineField({
-      title: 'Image',
-      name: 'image',
-      type: 'image',
-      fields: imageFields,
     }),
     defineField({
       title: 'Team',
@@ -41,11 +26,31 @@ export const career = defineType({
       title: 'Title',
       name: 'title',
       type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      title: 'Description',
+      name: 'description',
+      type: 'text',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Start Year',
       name: 'startYear',
       type: 'number',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      title: 'End Year',
+      name: 'endYear',
+      type: 'number',
+    }),
+    defineField({
+      title: 'Image',
+      name: 'image',
+      type: 'image',
+      fields: imageFields,
+      validation: (Rule) => Rule.required(),
     }),
   ],
 });
@@ -56,14 +61,40 @@ export const education = defineType({
   type: 'document',
   fields: [
     defineField({
+      title: 'School',
+      name: 'school',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       title: 'Degree',
       name: 'degree',
       type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      title: 'Major',
+      name: 'major',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      title: 'GPA',
+      name: 'gpa',
+      type: 'number',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Description',
       name: 'description',
       type: 'text',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      title: 'Start Year',
+      name: 'startYear',
+      type: 'number',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'End Year',
@@ -71,30 +102,11 @@ export const education = defineType({
       type: 'number',
     }),
     defineField({
-      title: 'GPA',
-      name: 'gpa',
-      type: 'number',
-    }),
-    defineField({
       title: 'Image',
       name: 'image',
       type: 'image',
       fields: imageFields,
-    }),
-    defineField({
-      title: 'Major',
-      name: 'major',
-      type: 'string',
-    }),
-    defineField({
-      title: 'School',
-      name: 'school',
-      type: 'string',
-    }),
-    defineField({
-      title: 'Start Year',
-      name: 'startYear',
-      type: 'number',
+      validation: (Rule) => Rule.required(),
     }),
   ],
 });

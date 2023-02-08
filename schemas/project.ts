@@ -19,13 +19,6 @@ export const project = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      title: 'Main Image',
-      name: 'mainImage',
-      type: 'image',
-      fields: imageFields,
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       title: 'Slug',
       name: 'slug',
       type: 'slug',
@@ -46,6 +39,13 @@ export const project = defineType({
           type: 'string',
         }),
       ],
+    }),
+    defineField({
+      title: 'Main Image',
+      name: 'mainImage',
+      type: 'image',
+      fields: imageFields,
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Images',
