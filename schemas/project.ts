@@ -48,6 +48,14 @@ export const project = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      title: 'Links',
+      name: 'links',
+      type: 'array',
+      of: [
+        defineArrayMember({ type: 'url', validation: (Rule) => Rule.uri({ allowRelative: true }) }),
+      ],
+    }),
+    defineField({
       title: 'Images',
       name: 'images',
       type: 'array',
